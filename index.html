@@ -49,7 +49,31 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="assets/img/profile.jpg" alt="" class="img-fluid rounded-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" class="sidebar-logo" aria-label="Keshav Sandhu logo mark">
+            <!-- Background -->
+            <circle cx="60" cy="60" r="58" fill="#0c1a2e"/>
+            <!-- Dashed accent ring -->
+            <circle cx="60" cy="60" r="54" fill="none" stroke="#149ddd" stroke-width="1.2" stroke-dasharray="7 4" transform="rotate(-70 60 60)" opacity="0.55"/>
+            <!-- Solid inner ring hairline -->
+            <circle cx="60" cy="60" r="51" fill="none" stroke="#ffffff" stroke-width="0.4" opacity="0.1"/>
+
+            <!-- K — vertical stem -->
+            <rect x="17" y="29" width="8" height="62" rx="1.5" fill="#ffffff"/>
+            <!-- K — upper arm (stem mid → upper-right) -->
+            <polygon points="25,55 25,62 55,29 46,29" fill="#ffffff"/>
+            <!-- K — lower arm (stem mid → lower-right) -->
+            <polygon points="25,58 25,65 55,91 46,91" fill="#ffffff"/>
+
+            <!-- Vertical separator dot -->
+            <circle cx="62" cy="60" r="2" fill="#149ddd" opacity="0.7"/>
+
+            <!-- S — drawn as a stroked bezier path -->
+            <path d="M90,40 C90,29 77,24 67,28 C58,32 58,43 67,49 C75,54 86,57 88,67 C90,77 84,88 71,89 C61,90 54,83 54,76"
+                  fill="none" stroke="#ffffff" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <!-- Dev motif: </> at bottom -->
+            <text x="60" y="110" font-family="monospace" font-size="9" fill="#149ddd" text-anchor="middle" opacity="0.65" letter-spacing="1">&lt;/&gt;</text>
+        </svg>
         <h1 class="text-light"><a href="index.html">Keshav Sandhu</a></h1>
         <div class="social-links mt-3 text-center">
           <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
@@ -577,7 +601,7 @@
               high-quality results set them apart. I highly recommend their services.
               <i class="bx bxs-quote-alt-right quote-icon-right"></i>
             </p>
-            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+            <!-- <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt=""> -->
             <h3>Lakshya Tyagi</h3>
             <h4>Founder &amp; Program Warehouse</h4>
           </div>
@@ -589,7 +613,7 @@
               and results-driven approach make them an invaluable asset. Exceptional work, every time.
               <i class="bx bxs-quote-alt-right quote-icon-right"></i>
             </p>
-            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+            <!-- <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt=""> -->
             <h3>Pawan Yadav</h3>
             <h4>Founder, OwnTechnologies</h4>
           </div>
@@ -613,7 +637,7 @@
               ideas into reality is impressive. A true professional who ensures success.
               <i class="bx bxs-quote-alt-right quote-icon-right"></i>
             </p>
-            <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+            <!-- <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt=""> -->
             <h3>Mr. Ajith</h3>
             <h4>Freelancer</h4>
           </div>
@@ -625,7 +649,7 @@
               to user-centric design make them a standout professional. A pleasure to work with.
               <i class="bx bxs-quote-alt-right quote-icon-right"></i>
             </p>
-            <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+            <!-- <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt=""> -->
             <h3>A. Chitranjan</h3>
             <h4>Owner, Puppy-tails</h4>
           </div>
@@ -679,27 +703,27 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4"
-                    data-msg="Please enter at least 4 chars" />
+                  <input type="text" name="name" class="form-control" id="name" required minlength="4"
+                    data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validate"></div>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" data-rule="email"
-                    data-msg="Please enter a valid email" />
+                  <input type="email" class="form-control" name="email" id="email" required
+                    data-rule="email" data-msg="Please enter a valid email" />
                   <div class="validate"></div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4"
-                  data-msg="Please enter at least 8 chars of subject" />
+                <input type="text" class="form-control" name="subject" id="subject" required minlength="4"
+                  data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                 <div class="validate"></div>
               </div>
               <div class="form-group">
                 <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" data-rule="required"
-                  data-msg="Please write something for us"></textarea>
+                <textarea class="form-control" name="message" rows="10" required
+                  data-rule="required" data-msg="Please write something for us"></textarea>
                 <div class="validate"></div>
               </div>
               <div class="mb-3">
@@ -742,12 +766,12 @@
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
   <script>
-    emailjs.init("7EjtnFEz-7ax6QsuK");  // Replace 'your_user_id' with your actual user ID
+    emailjs.init({ publicKey: "7EjtnFEz-7ax6QsuK" });
 
     function sendEmail(event) {
       event.preventDefault()
@@ -757,7 +781,7 @@
       }
 
       // Disable the submit button to prevent multiple submissions
-      document.querySelector('button').setAttribute('disabled', 'disabled');
+      document.querySelector('#myForm button[type="submit"]').setAttribute('disabled', 'disabled');
 
       emailjs.sendForm("service_k99s57e", "template_2a0tus6", "#myForm")
         .then(
@@ -776,7 +800,7 @@
         )
         .finally(function () {
           // Enable the submit button after sending (whether success or error)
-          document.querySelector('button').removeAttribute('disabled');
+          document.querySelector('#myForm button[type="submit"]').removeAttribute('disabled');
 
         });
     }
