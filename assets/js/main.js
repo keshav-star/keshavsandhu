@@ -70,13 +70,14 @@
     }
   });
 
-  // Navigation active state on scroll
+  // Navigation active state on scroll + back-to-top (merged into one handler)
   var nav_sections = $('section');
   var main_nav = $('.nav-menu, .mobile-nav');
 
   $(window).on('scroll', function() {
     var cur_pos = $(this).scrollTop() + 200;
 
+    // Update active nav link
     nav_sections.each(function() {
       var top = $(this).offset().top,
         bottom = top + $(this).outerHeight();
@@ -91,10 +92,8 @@
         $(".nav-menu ul:first li:first").addClass('active');
       }
     });
-  });
 
-  // Back to top button
-  $(window).scroll(function() {
+    // Back-to-top button visibility
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow');
     } else {
@@ -176,8 +175,8 @@
   // Init AOS
   function aos_init() {
     AOS.init({
-      duration: 1000,
-      easing: "ease-in-out-back",
+      duration: 700,
+      easing: "ease-in-out",
       once: true
     });
   }
