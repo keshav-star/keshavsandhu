@@ -1774,3 +1774,273 @@ section {
     padding-right: 20px 15px;
   }
 }
+
+/*--------------------------------------------------------------
+# Services — redesigned svc-card
+--------------------------------------------------------------*/
+.services .svc-card {
+  background: #fff;
+  border: 1px solid rgba(20, 157, 221, 0.12);
+  border-radius: 12px;
+  padding: 26px 24px 22px;
+  height: 100%;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.services .svc-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 0;
+  background: linear-gradient(180deg, #149ddd, #0d7abf);
+  transition: height 0.4s ease;
+}
+
+.services .svc-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 32px rgba(20, 157, 221, 0.13);
+  border-color: rgba(20, 157, 221, 0.3);
+}
+
+.services .svc-card:hover::before {
+  height: 100%;
+}
+
+.services .svc-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(20, 157, 221, 0.1);
+  color: #149ddd;
+  font-size: 22px;
+  margin-bottom: 16px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.services .svc-card:hover .svc-icon {
+  background: #149ddd;
+  color: #fff;
+}
+
+.services .svc-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  color: #173b6c;
+  margin-bottom: 10px;
+}
+
+.services .svc-card p {
+  font-size: 13px;
+  color: #556b8b;
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+
+.services .svc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.services .svc-tags span {
+  font-size: 11px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  background: rgba(20, 157, 221, 0.08);
+  color: #149ddd;
+  padding: 3px 9px;
+  border-radius: 20px;
+  border: 1px solid rgba(20, 157, 221, 0.2);
+}
+
+/*--------------------------------------------------------------
+# Testimonials — redesigned testi-card grid
+--------------------------------------------------------------*/
+.testimonials .testi-grid {
+  row-gap: 20px;
+}
+
+.testimonials .testi-card {
+  background: #fff;
+  border: 1px solid rgba(20, 157, 221, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  height: 100%;
+  margin-bottom: 20px;
+  transition: box-shadow 0.28s ease, transform 0.28s ease;
+}
+
+.testimonials .testi-card:hover {
+  box-shadow: 0 8px 28px rgba(20, 157, 221, 0.1);
+  transform: translateY(-3px);
+}
+
+.testimonials .testi-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.testimonials .testi-avatar {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #149ddd, #0d7abf);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+}
+
+.testimonials .testi-name {
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  color: #173b6c;
+  margin: 0 0 2px;
+}
+
+.testimonials .testi-role {
+  font-size: 12px;
+  color: #8590a0;
+  margin: 0 0 4px;
+}
+
+.testimonials .testi-stars {
+  color: #f5a623;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.testimonials .testi-quote {
+  font-size: 13.5px;
+  color: #444f5e;
+  font-style: italic;
+  line-height: 1.7;
+  margin-bottom: 14px;
+  border-left: 3px solid rgba(20, 157, 221, 0.25);
+  padding-left: 12px;
+}
+
+.testimonials .testi-project {
+  display: inline-block;
+  font-size: 11px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #149ddd;
+  background: rgba(20, 157, 221, 0.08);
+  border: 1px solid rgba(20, 157, 221, 0.2);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+/*--------------------------------------------------------------
+# Contact — redesigned info panel + form tweaks
+--------------------------------------------------------------*/
+.contact-info-panel {
+  background: #fff;
+  border: 1px solid rgba(20, 157, 221, 0.1);
+  border-radius: 12px;
+  padding: 28px 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.contact-info-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 9px;
+  background: rgba(20, 157, 221, 0.1);
+  color: #149ddd;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.contact-info-item:hover .contact-info-icon {
+  background: #149ddd;
+  color: #fff;
+}
+
+.contact-info-item h5 {
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  color: #173b6c;
+  margin: 0 0 2px;
+}
+
+.contact-info-item p {
+  font-size: 13px;
+  color: #556b8b;
+  margin: 0;
+}
+
+.contact-link {
+  font-size: 13px;
+  color: #149ddd;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: #0d7abf;
+  text-decoration: underline;
+}
+
+.contact-cta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+  padding: 12px 14px;
+  background: rgba(20, 157, 221, 0.06);
+  border: 1px solid rgba(20, 157, 221, 0.2);
+  border-radius: 9px;
+  font-size: 13px;
+  color: #149ddd;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.contact-cta i {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* Send button icon */
+.contact .php-email-form button i {
+  margin-left: 6px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+@media (max-width: 991px) {
+  .contact-info-panel {
+    margin-bottom: 24px;
+  }
+}
