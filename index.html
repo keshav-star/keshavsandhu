@@ -6,8 +6,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Keshav Sandhu</title>
-  <meta content="Keshav Sandhu's personal website, showcasing his skills, work experience, and projects as a software developer." name="description">
-  <meta content="Keshav Sandhu, software developer, web developer, front-end, back-end, full-stack, React, Node.js, HTML, CSS, JavaScript" name="keywords">
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LC00WEJXK4"></script>
@@ -49,7 +49,34 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="assets/img/profile.jpg" alt="" class="img-fluid rounded-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" class="sidebar-logo" id="sidebar-logo" aria-label="Keshav Sandhu mark">
+            <!-- Background -->
+            <circle id="logo-bg" cx="60" cy="60" r="58" fill="#0c1a2e"/>
+            <!-- Spinning dashed ring -->
+            <circle id="logo-ring" cx="60" cy="60" r="54" fill="none" stroke="#149ddd" stroke-width="1" stroke-dasharray="5 5"/>
+            <!-- Inner hairline -->
+            <circle cx="60" cy="60" r="49" fill="none" stroke="#ffffff" stroke-width="0.3" opacity="0.08"/>
+
+            <!-- KESHAV — above divider -->
+            <text id="logo-k"
+                  x="60" y="52"
+                  font-family="Poppins, 'Open Sans', sans-serif"
+                  font-size="13" font-weight="600"
+                  fill="#149ddd" text-anchor="middle" letter-spacing="3">KESHAV</text>
+
+            <!-- Accent divider -->
+            <rect id="logo-divider" x="28" y="58.5" width="64" height="1" rx="0.5" fill="#149ddd"/>
+            <!-- End dots -->
+            <circle id="logo-dot-l" cx="28" cy="59" r="2" fill="#149ddd"/>
+            <circle id="logo-dot-r" cx="92" cy="59" r="2" fill="#149ddd"/>
+
+            <!-- SANDHU — below divider -->
+            <text id="logo-s"
+                  x="60" y="74"
+                  font-family="Poppins, 'Open Sans', sans-serif"
+                  font-size="13" font-weight="600"
+                  fill="#149ddd" text-anchor="middle" letter-spacing="3">SANDHU</text>
+        </svg>
         <h1 class="text-light"><a href="index.html">Keshav Sandhu</a></h1>
         <div class="social-links mt-3 text-center">
           <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
@@ -83,7 +110,7 @@
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
       <h1>Keshav Sandhu</h1>
-      <p>I'm <span class="typed" data-typed-items="MERN Stack Developer, looking for Developer role"></span></p>
+      <p>I'm a <span class="typed" data-typed-items="Full-Stack Engineer, Web Developer, AI-Integrated App Developer"></span></p>
     </div>
   </section><!-- End Hero -->
 
@@ -93,50 +120,99 @@
     <section id="about" class="about">
       <div class="container">
 
-        <div class="section-title">
+        <div class="section-title" data-aos="fade-up">
           <h2>About</h2>
-
         </div>
 
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profilepic.jpeg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>MERN Stack Web developer </h3>
-            <p class="font-italic">
-              Full-stack <b>MERN</b> developer proficient in ReactJS and Node.js. Expertise in developing
-              dynamic and static websites using Bootstrap, <b>tailwind</b> and raw CSS and SCSS.
-              Utilized <b>Firebase</b>, <b>MongoDB</b>, and <b>PostgreSQL</b> to create robust backends for
-              authentication and database management in various projects. <br>
-              I possess a strong grasp of the fundamentals of <b>data structures and algorithms</b>,
-              evident by my <b>4-star rating on CodeChef</b> for problem-solving in <b>C++</b>.
-              I am a fast learner and consistently strive to explore new technologies and stacks,
-              adapting as project requirements demand.
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="icofont-rounded-right"></i> <strong>Languages :</strong> TypeScript, C++</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Frontend:</strong> ReactJs, Shadcn, Nextjs</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Backend:</strong> Nodejs, PHP, PostgreSQL</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Other:</strong> Figma, React-Native, MongoDB</li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> 24</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Degree:</strong> B Tech, CSE</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> Keshavsandhu.me@gmail.com </li>
-                  <li><i class="icofont-rounded-right"></i> <strong>City:</strong> Karnal, Haryana</li>
-                </ul>
+        <div class="row align-items-center">
+
+          <!-- Profile image column -->
+          <div class="col-lg-4 col-md-6 mb-5 mb-lg-0" data-aos="fade-right" data-aos-delay="50">
+            <div class="about-img-wrap">
+              <img src="assets/img/profile-pic.png" class="about-profile-img img-fluid" alt="Keshav Sandhu">
+              <div class="about-exp-badge">
+                <span class="about-exp-num">2+</span>
+                <span class="about-exp-label">Years<br>Experience</span>
               </div>
             </div>
           </div>
-        </div>
+
+          <!-- Content column -->
+          <div class="col-lg-8 col-md-6" data-aos="fade-left" data-aos-delay="120">
+
+            <span class="about-role-badge">Full-Stack Engineer</span>
+
+            <p class="about-bio">
+              Building and scaling <strong>AI-integrated web applications</strong> with React.js, Next.js, TypeScript, Node.js, and PostgreSQL. Delivered <strong>40% faster APIs</strong>, Core Web Vitals in the <strong>90th+ percentile</strong>, and <strong>35–45% page-load improvements</strong> across production systems.
+            </p>
+
+            <!-- Info tiles grid -->
+            <div class="about-info-grid">
+
+              <div class="about-info-tile" data-aos="fade-up" data-aos-delay="150">
+                <span class="about-tile-icon"><i class="bx bx-code-alt"></i></span>
+                <div>
+                  <span class="tile-label">Languages</span>
+                  <span class="tile-value">JS &middot; TypeScript &middot; SQL &middot; C++</span>
+                </div>
+              </div>
+
+              <div class="about-info-tile" data-aos="fade-up" data-aos-delay="200">
+                <span class="about-tile-icon"><i class="bx bx-layer"></i></span>
+                <div>
+                  <span class="tile-label">Frontend</span>
+                  <span class="tile-value">React.js &middot; Next.js &middot; Tailwind</span>
+                </div>
+              </div>
+
+              <div class="about-info-tile" data-aos="fade-up" data-aos-delay="250">
+                <span class="about-tile-icon"><i class="bx bx-server"></i></span>
+                <div>
+                  <span class="tile-label">Backend</span>
+                  <span class="tile-value">Node.js &middot; Express &middot; PostgreSQL</span>
+                </div>
+              </div>
+
+              <div class="about-info-tile" data-aos="fade-up" data-aos-delay="300">
+                <span class="about-tile-icon"><i class="bx bx-cloud"></i></span>
+                <div>
+                  <span class="tile-label">DevOps &amp; AI</span>
+                  <span class="tile-value">AWS &middot; Docker &middot; LangChain &middot; Gemini</span>
+                </div>
+              </div>
+
+              <div class="about-info-tile" data-aos="fade-up" data-aos-delay="350">
+                <span class="about-tile-icon"><i class="bx bx-graduation"></i></span>
+                <div>
+                  <span class="tile-label">Degree</span>
+                  <span class="tile-value">B.Tech — Computer Science &amp; Engineering</span>
+                </div>
+              </div>
+
+              <div class="about-info-tile" data-aos="fade-up" data-aos-delay="400">
+                <span class="about-tile-icon"><i class="bx bx-map-pin"></i></span>
+                <div>
+                  <span class="tile-label">Location</span>
+                  <span class="tile-value">Noida, Uttar Pradesh</span>
+                </div>
+              </div>
+
+              <div class="about-info-tile about-info-tile--wide" data-aos="fade-up" data-aos-delay="450">
+                <span class="about-tile-icon"><i class="bx bx-envelope"></i></span>
+                <div>
+                  <span class="tile-label">Email</span>
+                  <a href="mailto:keshavsandhu.me@gmail.com" class="tile-value tile-link">keshavsandhu.me@gmail.com</a>
+                </div>
+              </div>
+
+            </div><!-- End info grid -->
+
+          </div><!-- End content col -->
+        </div><!-- End row -->
 
       </div>
     </section><!-- End About Section -->
+
 
     <!-- ======= Facts Section ======= -->
     <section id="facts" class="facts">
@@ -176,7 +252,7 @@
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="count-box">
               <i class="icofont-users-alt-5"></i>
-              <span data-toggle="counter-up">3</span>
+              <span data-toggle="counter-up">2</span>
               <p><strong>Years</strong> Experience</p>
             </div>
           </div>
@@ -193,85 +269,136 @@
 
         <div class="section-title">
           <h2>Skills</h2>
-          <p>Proficient in leveraging modern web technologies to create responsive and intuitive user interfaces, with
-            expertise in React.js for building dynamic and interactive front-end applications.</p>
+          <p>Proficient in leveraging modern web technologies to create responsive, scalable, and intuitive platforms, with
+            expertise in full-stack engineering, cloud deployments, and AI model integrations.</p>
         </div>
-        <div className="skills-icons">
-          <div class="skill-images">
-            <img src="assets/img/skills/js.png" alt="JavaScript" title="JavaScript" />
-            <img src="assets/img/skills/reactjs.png" alt="React" title="ReactJs" />
-            <img src="assets/img/skills/redux.png" alt="Redux" title="Redux" />
-            <img src="assets/img/skills/sass.png" alt="Sass" title="Sass" />
-            <img src="assets/img/skills/bootstrap.png" alt="Bootstrap" title="Bootstrap" />
-            <img src="assets/img/skills/twind.png" alt="Tailwind" title="Tailwind" />
-            <img src="assets/img/skills/mysql.png" alt="SQL" title="SQL" />
-            <img src="assets/img/skills/postgre.png" alt="PostgreSQL" title="PostgreSQL" />
-            <img src="assets/img/skills/c++.png" alt="C++" title="C++" />
-            <img src="assets/img/skills/nodejs.png" alt="Node.js" title="NodeJs" />
-            <img src="assets/img/skills/firebase.png" alt="Firebase" title="Firebase" />
-            <img src="assets/img/skills/adobexd.png" alt="adobexd" title="AdobeXd" />
-            <img src="assets/img/skills/mongo.png" alt="MongoDB" title="MongoDB" />
-            <img src="assets/img/skills/figma.png" alt="Figma" title="Figma" />
-            </di>
+        <div class="row skills-content text-center">
+          <!-- Languages -->
+          <div class="col-lg-2 col-md-3 col-4 mb-4" data-aos="fade-up" data-aos-delay="50">
+            <div class="skill-card">
+              <img src="assets/img/skills/js.png" class="img-fluid" alt="JavaScript" title="JavaScript" />
+              <span>JavaScript</span>
+            </div>
           </div>
-          <!-- <div class="row skills-content">
-
-          <div class="col-lg-6" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">Javascript <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
+          <div class="col-lg-2 col-md-3 col-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-card">
+              <img src="assets/img/skills/typescript.svg" class="img-fluid" alt="TypeScript" title="TypeScript" />
+              <span>TypeScript</span>
             </div>
-
-            <div class="progress">
-              <span class="skill">Bootstrap <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">ReactJs <i class="val">60%%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
           </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="progress">
-              <span class="skill">C++ <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
+          <div class="col-lg-2 col-md-3 col-4 mb-4" data-aos="fade-up" data-aos-delay="150">
+            <div class="skill-card">
+              <img src="assets/img/skills/c++.png" class="img-fluid" alt="C++" title="C++" />
+              <span>C++</span>
             </div>
-
-            <div class="progress">
-              <span class="skill">OOPS <i class="val">65%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
+          </div>
+          <!-- Frontend -->
+          <div class="col-lg-2 col-md-3 col-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-card">
+              <img src="assets/img/skills/reactjs.png" class="img-fluid" alt="React.js" title="React.js" />
+              <span>React.js</span>
             </div>
-
-            <div class="progress">
-              <span class="skill">Data Structures and Algorithms <i class="val">60%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-4 mb-4" data-aos="fade-up" data-aos-delay="250">
+            <div class="skill-card">
+              <img src="assets/img/skills/nextjs.svg" class="img-fluid" alt="Next.js" title="Next.js" />
+              <span>Next.js</span>
             </div>
-
-
-          </div> -->
+          </div>
+          <div class="col-lg-2 col-md-3 col-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-card">
+              <img src="assets/img/skills/redux.png" class="img-fluid" alt="Redux" title="Redux" />
+              <span>Redux</span>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-4 mb-4" data-aos="fade-up" data-aos-delay="350">
+            <div class="skill-card">
+              <img src="assets/img/skills/twind.png" class="img-fluid" alt="Tailwind CSS" title="Tailwind CSS" />
+              <span>Tailwind CSS</span>
+            </div>
+          </div>
+          <!-- Backend -->
+          <div class="col-lg-2 col-md-3 col-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="skill-card">
+              <img src="assets/img/skills/nodejs.png" class="img-fluid" alt="Node.js" title="Node.js" />
+              <span>Node.js</span>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-4 mb-4" data-aos="fade-up" data-aos-delay="450">
+            <div class="skill-card">
+              <img src="assets/img/skills/expressjs.svg" class="img-fluid" alt="Express.js" title="Express.js" />
+              <span>Express.js</span>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="skill-card">
+              <img src="assets/img/skills/prisma.svg" class="img-fluid" alt="Prisma" title="Prisma ORM" />
+              <span>Prisma</span>
+            </div>
+          </div>
+          <!-- Databases -->
+          <div class="col-lg-2 col-md-3 col-4 mb-4" data-aos="fade-up" data-aos-delay="550">
+            <div class="skill-card">
+              <img src="assets/img/skills/postgre.png" class="img-fluid" alt="PostgreSQL" title="PostgreSQL" />
+              <span>PostgreSQL</span>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-4 mb-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="skill-card">
+              <img src="assets/img/skills/mysql.png" class="img-fluid" alt="MySQL" title="MySQL" />
+              <span>MySQL</span>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-4 mb-4" data-aos="fade-up" data-aos-delay="650">
+            <div class="skill-card">
+              <img src="assets/img/skills/mongo.png" class="img-fluid" alt="MongoDB" title="MongoDB" />
+              <span>MongoDB</span>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-4 mb-4" data-aos="fade-up" data-aos-delay="700">
+            <div class="skill-card">
+              <img src="assets/img/skills/redis.svg" class="img-fluid" alt="Redis" title="Redis" />
+              <span>Redis</span>
+            </div>
+          </div>
+          <!-- DevOps & Cloud -->
+          <div class="col-lg-2 col-md-3 col-4 mb-4" data-aos="fade-up" data-aos-delay="750">
+            <div class="skill-card">
+              <img src="assets/img/skills/aws.svg" class="img-fluid" alt="AWS" title="AWS" />
+              <span>AWS</span>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-4 mb-4" data-aos="fade-up" data-aos-delay="800">
+            <div class="skill-card">
+              <img src="assets/img/skills/docker.svg" class="img-fluid" alt="Docker" title="Docker" />
+              <span>Docker</span>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-4 mb-4" data-aos="fade-up" data-aos-delay="850">
+            <div class="skill-card">
+              <img src="assets/img/skills/git.svg" class="img-fluid" alt="Git" title="Git" />
+              <span>Git</span>
+            </div>
+          </div>
+          <!-- Tools -->
+          <div class="col-lg-2 col-md-3 col-4 mb-4" data-aos="fade-up" data-aos-delay="900">
+            <div class="skill-card">
+              <img src="assets/img/skills/firebase.png" class="img-fluid" alt="Firebase" title="Firebase" />
+              <span>Firebase</span>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-4 mb-4" data-aos="fade-up" data-aos-delay="950">
+            <div class="skill-card">
+              <img src="assets/img/skills/postman.svg" class="img-fluid" alt="Postman" title="Postman" />
+              <span>Postman</span>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-4 mb-4" data-aos="fade-up" data-aos-delay="1000">
+            <div class="skill-card">
+              <img src="assets/img/skills/figma.png" class="img-fluid" alt="Figma" title="Figma" />
+              <span>Figma</span>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -291,63 +418,69 @@
             <h3 class="resume-title">Summary</h3>
             <div class="resume-item pb-0">
               <h4>Keshav Sandhu</h4>
-              <p><em>Innovative and deadline-driven Web developer with 1.2+ years of experience designing and developing
-                  full fletched websites. Loves to work in team or alone </em></p>
+              <p><em>Full-Stack Engineer with 2+ years of experience building and scaling AI-integrated web applications using React.js, Next.js, TypeScript, Node.js, Express.js, and PostgreSQL.</em></p>
               <ul>
-                <li>Karnal, India 132114</li>
-                <!-- <li>(+91) 93061 *****</li>
-                <li>keshav******@gmail.com</li> -->
+                <li>Noida, Uttar Pradesh</li>
+                <li>+91 93061 96592</li>
+                <li>keshavsandhu.me@gmail.com</li>
               </ul>
             </div>
 
             <h3 class="resume-title">Education</h3>
             <div class="resume-item">
-              <h4>Bachelor of Technology &amp; Computer Science</h4>
+              <h4>B.Tech – Computer Science &amp; Engineering</h4>
               <h5>2019 - 2023</h5>
-              <p><em>University Institute of Engineering And Technology, Kurukshetra,Haryana</em></p>
-              <!-- <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p> -->
+              <p><em>UIET, Kurukshetra University, Kurukshetra</em></p>
+            </div>
+            
+            <h3 class="resume-title">Certifications &amp; Achievements</h3>
+            <div class="resume-item">
+              <h4>Certifications</h4>
+              <p><em>IIT Bombay (IITX)</em></p>
+              <ul>
+                <li>Object-Oriented Programming (OOP)</li>
+                <li>Data Structures and Algorithms (DSA)</li>
+              </ul>
             </div>
             <div class="resume-item">
-              <h4>Senior Secondary &amp; Science</h4>
-              <h5>2018</h5>
-              <p><em>Rishikul Senior Secondary School, Gharaunda, Karnal</em></p>
-              <!-- <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p> -->
+              <h4>Achievements</h4>
+              <p><em>Cleared Round 1 among 15 teams by building a mental wellness screening platform with analytics-driven insights.</em></p>
             </div>
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Work Experience</h3>
             <div class="resume-item">
-              <h4>Full Stack Developer</h4>
-              <h5>03/2024 - present</h5>
-              <p><em> VDoIT Technologies Ltd., Gurugram </em></p>
+              <h4>Software Engineer</h4>
+              <h5>11/2025 - Present</h5>
+              <p><em>Scala Code Global Pvt. Ltd., Noida</em></p>
               <ul>
-                <li><b>Built and maintained full-stack web apps</b> with React and Node.js, boosting user engagement by
-                  25%.</li>
-                <li><b>Optimized APIs and data integration</b> , cutting response time by 30%.</li>
-                <li><b>Worked with cross-functional teams</b> to meet project deadlines</li>
+                <li>Architected a multi-tenant admin system with RBAC to onboard and manage multiple retailers.</li>
+                <li>Integrated Gemini VTO and internal AI pipelines with configurable model switching for virtual try-on.</li>
+                <li>Optimized backend APIs and database queries using caching and indexing, reducing response latency by ~35%.</li>
+                <li>Developed Firebase-based authentication with social login and built analytics dashboards to track user behavior.</li>
               </ul>
             </div>
             <div class="resume-item">
-              <h4>Full Stack MERN Developer</h4>
-              <h5>10/2023 - 12/2023</h5>
-              <p><em> OwnTechnologies, New Delhi </em></p>
+              <h4>Full Stack Web Developer</h4>
+              <h5>02/2024 - 10/2025</h5>
+              <p><em>VDoIT Technologies Ltd., Gurugram</em></p>
               <ul>
-                <li>Developed numerous Live projects</li>
-                <li>Collaborated with developers to achieve project milestones</li>
-                <li>Revamped website design, optimizing user experience</li>
+                <li>Developed <b>Twin Protocol</b>, an AI-powered platform with Next.js, Node.js, and LangChain for PDF-based RAG query responses.</li>
+                <li>Improved API performance with caching layers, reducing response time by 40%, and integrated Stripe payments.</li>
+                <li>Built <b>Incantio</b>, a scalable music collaboration platform using Next.js, supporting 50+ active users with real-time UI interactions.</li>
+                <li>Optimized PostgreSQL queries, improving page load speed by 35% across the platforms.</li>
               </ul>
             </div>
-
-            <!-- <div class="resume-item">
-              <h4> Freelance Web Developer</h4>
-              <h5>07/2023 - 10/2023</h5>
-              <p><em>Freelancer.com</em></p>
+            <div class="resume-item">
+              <h4>Full Stack Web Developer</h4>
+              <h5>10/2023 - 12/2023</h5>
+              <p><em>Own Technologies</em></p>
               <ul>
-                <li>Frontend for multi platforms integration based MERN project</li>
-                <li>Engineered dynamic features for "Pet-Tails" website</li>
-                <li>Developed and integrated APIs, for MS Access, MYSQL and MSSQL</li>
+                <li>Led end-to-end development of a coaching platform supporting 20+ courses and handling 500+ monthly transactions.</li>
+                <li>Integrated Razorpay payment gateway for secure transaction processing, contributing to a 25% increase in revenue.</li>
+                <li>Built scalable frontend and backend workflows, improving user engagement by 30% through smooth CSS animations.</li>
               </ul>
-            </div> -->
+            </div>
           </div>
         </div>
 
@@ -358,104 +491,202 @@
     <section id="portfolio" class="portfolio section-bg">
       <div class="container">
 
-        <div class="section-title">
+        <div class="section-title" data-aos="fade-up">
           <h2>Projects</h2>
-          <p></p>
+          <p>A selection of real-world projects built with modern full-stack technologies — from AI-powered platforms to scalable web apps.</p>
         </div>
 
-        <div class="row" data-aos="fade-up">
+        <!-- Filter bar -->
+        <div class="row" data-aos="fade-up" data-aos-delay="50">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app" >ReactJs</li>
+              <li data-filter=".filter-app">React.js</li>
+              <li data-filter=".filter-nextjs">Next.js</li>
               <li data-filter=".filter-tailwind">Tailwind</li>
-              <li data-filter=".filter-card">NodeJs</li>
+              <li data-filter=".filter-card">Node.js</li>
               <li data-filter=".filter-web">Firebase</li>
             </ul>
           </div>
         </div>
 
+        <!-- Project count badge -->
+        <div class="row" data-aos="fade-up" data-aos-delay="75">
+          <div class="col-12 text-center">
+            <p class="portfolio-count-label"><span id="portfolio-count-num">7</span> Projects</p>
+          </div>
+        </div>
+
+        <!-- Cards grid -->
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-tailwind filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/space.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/space.png" data-gall="portfolioGallery" class="venobox"
-                  title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="https://space-exploration-mars.netlify.app/" target="_blank" title="Live Link"><i class="bx bx-link"></i></a>
+          <!-- Digital Deepak AI -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-tailwind filter-app filter-nextjs">
+            <div class="pcard" data-aos="zoom-in" data-aos-delay="0">
+              <span class="pcard-badge">Featured</span>
+              <div class="pcard-thumb">
+                <img src="assets/img/portfolio/deepakai.png" class="img-fluid" alt="Digital Deepak AI">
+                <div class="pcard-overlay">
+                  <a href="assets/img/portfolio/deepakai.png" data-gall="portfolioGallery" class="venobox pcard-preview" title="Preview"><i class="bx bx-zoom-in"></i> Preview</a>
+                </div>
+              </div>
+              <div class="pcard-body">
+                <h4 class="pcard-title">Digital Deepak AI</h4>
+                <p class="pcard-desc">AI-powered personal brand platform with LangChain RAG, smart chatbot, and content analytics dashboard.</p>
+                <div class="pcard-tags">
+                  <span data-tag-filter=".filter-nextjs">Next.js</span><span data-tag-filter=".filter-tailwind">Tailwind</span><span>LangChain</span><span>AI</span>
+                </div>
+                <div class="pcard-actions">
+                  <a href="https://digitaldeepak.ai" target="_blank" class="btn-live"><i class="bx bx-link-external"></i> Live</a>
+                  <a href="https://github.com/keshav-star" target="_blank" class="btn-github"><i class="bx bxl-github"></i> Code</a>
+                </div>
               </div>
             </div>
           </div>
+
+          <!-- ViaSuccess -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-tailwind filter-nextjs">
+            <div class="pcard" data-aos="zoom-in" data-aos-delay="80">
+              <span class="pcard-badge">Featured</span>
+              <div class="pcard-thumb">
+                <img src="assets/img/portfolio/viasuccess.png" class="img-fluid" alt="ViaSuccess">
+                <div class="pcard-overlay">
+                  <a href="assets/img/portfolio/viasuccess.png" data-gall="portfolioGallery" class="venobox pcard-preview" title="Preview"><i class="bx bx-zoom-in"></i> Preview</a>
+                </div>
+              </div>
+              <div class="pcard-body">
+                <h4 class="pcard-title">ViaSuccess</h4>
+                <p class="pcard-desc">Scalable coaching & mentorship platform supporting 50+ active users with real-time UI, Stripe payments, and analytics.</p>
+                <div class="pcard-tags">
+                  <span data-tag-filter=".filter-nextjs">Next.js</span><span data-tag-filter=".filter-tailwind">Tailwind</span><span>Stripe</span><span>PostgreSQL</span>
+                </div>
+                <div class="pcard-actions">
+                  <a href="https://app.viasuccess.io/" target="_blank" class="btn-live"><i class="bx bx-link-external"></i> Live</a>
+                  <a href="https://github.com/keshav-star" target="_blank" class="btn-github"><i class="bx bxl-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ChemTime -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/chemtime.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/chemtime.png" data-gall="portfolioGallery" class="venobox"
-                  title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="https://chemtime.co.in" target="_blank" title="Live Link"><i class="bx bx-link"></i></a>
+            <div class="pcard" data-aos="zoom-in" data-aos-delay="160">
+              <div class="pcard-thumb">
+                <img src="assets/img/portfolio/chemtime.png" class="img-fluid" alt="ChemTime">
+                <div class="pcard-overlay">
+                  <a href="assets/img/portfolio/chemtime.png" data-gall="portfolioGallery" class="venobox pcard-preview" title="Preview"><i class="bx bx-zoom-in"></i> Preview</a>
+                </div>
+              </div>
+              <div class="pcard-body">
+                <h4 class="pcard-title">ChemTime</h4>
+                <p class="pcard-desc">E-learning platform for chemistry with interactive quizzes, video modules, and progress tracking for students.</p>
+                <div class="pcard-tags">
+                  <span data-tag-filter=".filter-app">React.js</span><span data-tag-filter=".filter-card">Node.js</span><span>MongoDB</span>
+                </div>
+                <div class="pcard-actions">
+                  <a href="https://chemtime.co.in" target="_blank" class="btn-live"><i class="bx bx-link-external"></i> Live</a>
+                  <a href="https://github.com/keshav-star" target="_blank" class="btn-github"><i class="bx bxl-github"></i> Code</a>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/edatech.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/edatech.png" data-gall="portfolioGallery" class="venobox"
-                  title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="https://eduact-keshav.netlify.app" target="_blank" title="Live Link"><i class="bx bx-link"></i></a>
+          <!-- EduAct -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app filter-card">
+            <div class="pcard" data-aos="zoom-in" data-aos-delay="240">
+              <div class="pcard-thumb">
+                <img src="assets/img/portfolio/edatech.png" class="img-fluid" alt="EduAct">
+                <div class="pcard-overlay">
+                  <a href="assets/img/portfolio/edatech.png" data-gall="portfolioGallery" class="venobox pcard-preview" title="Preview"><i class="bx bx-zoom-in"></i> Preview</a>
+                </div>
+              </div>
+              <div class="pcard-body">
+                <h4 class="pcard-title">EduAct</h4>
+                <p class="pcard-desc">Coaching platform supporting 20+ courses and 500+ monthly transactions with Razorpay integration and role-based access.</p>
+                <div class="pcard-tags">
+                  <span data-tag-filter=".filter-app">React.js</span><span data-tag-filter=".filter-card">Node.js</span><span>Razorpay</span><span>Express</span>
+                </div>
+                <div class="pcard-actions">
+                  <a href="https://eduact-keshav.netlify.app" target="_blank" class="btn-live"><i class="bx bx-link-external"></i> Live</a>
+                  <a href="https://github.com/keshav-star" target="_blank" class="btn-github"><i class="bx bxl-github"></i> Code</a>
+                </div>
               </div>
             </div>
           </div>
 
+          <!-- Optimum Holiday -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/hotel.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/hotel.png" data-gall="portfolioGallery" class="venobox" title="Preview"><i
-                    class="bx bx-plus"></i></a>
-                <a href="https://optimumholiday.com" target="_blank" title="Live Link"><i class="bx bx-link"></i></a>
+            <div class="pcard" data-aos="zoom-in" data-aos-delay="320">
+              <div class="pcard-thumb">
+                <img src="assets/img/portfolio/hotel.png" class="img-fluid" alt="Optimum Holiday">
+                <div class="pcard-overlay">
+                  <a href="assets/img/portfolio/hotel.png" data-gall="portfolioGallery" class="venobox pcard-preview" title="Preview"><i class="bx bx-zoom-in"></i> Preview</a>
+                </div>
+              </div>
+              <div class="pcard-body">
+                <h4 class="pcard-title">Optimum Holiday</h4>
+                <p class="pcard-desc">Travel & holiday booking portal with dynamic package listings, inquiry forms, and admin dashboard for managing tours.</p>
+                <div class="pcard-tags">
+                  <span data-tag-filter=".filter-card">Node.js</span><span>Express</span><span>MySQL</span>
+                </div>
+                <div class="pcard-actions">
+                  <a href="https://optimumholiday.com" target="_blank" class="btn-live"><i class="bx bx-link-external"></i> Live</a>
+                  <a href="https://github.com/keshav-star" target="_blank" class="btn-github"><i class="bx bxl-github"></i> Code</a>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-tailwind">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/viasuccess.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/viasuccess.png" data-gall="portfolioGallery" class="venobox"
-                  title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="https://app.viasuccess.io/" target="_blank" title="Live Link"><i class="bx bx-link"></i></a>
+          <!-- IELTS Guroo -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card filter-app">
+            <div class="pcard" data-aos="zoom-in" data-aos-delay="400">
+              <div class="pcard-thumb">
+                <img src="assets/img/portfolio/ielts.png" class="img-fluid" alt="IELTS Guroo">
+                <div class="pcard-overlay">
+                  <a href="assets/img/portfolio/ielts.png" data-gall="portfolioGallery" class="venobox pcard-preview" title="Preview"><i class="bx bx-zoom-in"></i> Preview</a>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/ielts.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/ielts.png" data-gall="portfolioGallery" class="venobox" title="Preview"><i
-                    class="bx bx-plus"></i></a>
-                <a href="https://ielts-guroo.netlify.app/" target="_blank" title="Live Link"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/pet.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/pet.png" data-gall="portfolioGallery" class="venobox" title="Preview"><i
-                    class="bx bx-plus"></i></a>
-                <a href="https://puppy-tails.pet/" target="_blank" title="Live Link"><i class="bx bx-link"></i></a>
+              <div class="pcard-body">
+                <h4 class="pcard-title">IELTS Guroo</h4>
+                <p class="pcard-desc">Comprehensive IELTS preparation platform with mock tests, score tracking, and curated study material for aspirants.</p>
+                <div class="pcard-tags">
+                  <span data-tag-filter=".filter-app">React.js</span><span data-tag-filter=".filter-card">Node.js</span><span>PostgreSQL</span>
+                </div>
+                <div class="pcard-actions">
+                  <a href="https://ielts-guroo.netlify.app/" target="_blank" class="btn-live"><i class="bx bx-link-external"></i> Live</a>
+                  <a href="https://github.com/keshav-star" target="_blank" class="btn-github"><i class="bx bxl-github"></i> Code</a>
+                </div>
               </div>
             </div>
           </div>
 
-        </div>
-        <!-- End Portfolio Section -->
+          <!-- Puppy Tails -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-app">
+            <div class="pcard" data-aos="zoom-in" data-aos-delay="480">
+              <div class="pcard-thumb">
+                <img src="assets/img/portfolio/pet.png" class="img-fluid" alt="Puppy Tails">
+                <div class="pcard-overlay">
+                  <a href="assets/img/portfolio/pet.png" data-gall="portfolioGallery" class="venobox pcard-preview" title="Preview"><i class="bx bx-zoom-in"></i> Preview</a>
+                </div>
+              </div>
+              <div class="pcard-body">
+                <h4 class="pcard-title">Puppy Tails</h4>
+                <p class="pcard-desc">Pet products e-commerce site with Firebase auth, real-time cart management, and smooth CSS animations for engagement.</p>
+                <div class="pcard-tags">
+                  <span data-tag-filter=".filter-app">React.js</span><span data-tag-filter=".filter-web">Firebase</span><span>CSS Animations</span>
+                </div>
+                <div class="pcard-actions">
+                  <a href="https://puppy-tails.pet/" target="_blank" class="btn-live"><i class="bx bx-link-external"></i> Live</a>
+                  <a href="https://github.com/keshav-star" target="_blank" class="btn-github"><i class="bx bxl-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    </section>
+        </div><!-- End Cards Grid -->
+
+      </div>
+    </section><!-- End Portfolio Section -->
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
@@ -527,7 +758,7 @@
               high-quality results set them apart. I highly recommend their services.
               <i class="bx bxs-quote-alt-right quote-icon-right"></i>
             </p>
-            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+            <!-- <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt=""> -->
             <h3>Lakshya Tyagi</h3>
             <h4>Founder &amp; Program Warehouse</h4>
           </div>
@@ -539,7 +770,7 @@
               and results-driven approach make them an invaluable asset. Exceptional work, every time.
               <i class="bx bxs-quote-alt-right quote-icon-right"></i>
             </p>
-            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+            <!-- <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt=""> -->
             <h3>Pawan Yadav</h3>
             <h4>Founder, OwnTechnologies</h4>
           </div>
@@ -563,7 +794,7 @@
               ideas into reality is impressive. A true professional who ensures success.
               <i class="bx bxs-quote-alt-right quote-icon-right"></i>
             </p>
-            <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+            <!-- <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt=""> -->
             <h3>Mr. Ajith</h3>
             <h4>Freelancer</h4>
           </div>
@@ -575,7 +806,7 @@
               to user-centric design make them a standout professional. A pleasure to work with.
               <i class="bx bxs-quote-alt-right quote-icon-right"></i>
             </p>
-            <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+            <!-- <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt=""> -->
             <h3>A. Chitranjan</h3>
             <h4>Owner, Puppy-tails</h4>
           </div>
@@ -602,7 +833,7 @@
               <div class="address">
                 <i class="icofont-google-map"></i>
                 <h4>Location:</h4>
-                <p>Gharaunda, Karnal, Haryana 132114</p>
+                <p>Noida, Uttar Pradesh</p>
               </div>
 
               <div class="email">
@@ -617,7 +848,7 @@
                 <p>+91 93061 96592</p>
               </div>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d443877.81747271924!2d77.07947049999997!3d29.63868370000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1657602408070!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112102.66847864402!2d77.291771!3d28.5355161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                 frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
 
             </div>
@@ -629,27 +860,27 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4"
-                    data-msg="Please enter at least 4 chars" />
+                  <input type="text" name="name" class="form-control" id="name" required minlength="4"
+                    data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validate"></div>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" data-rule="email"
-                    data-msg="Please enter a valid email" />
+                  <input type="email" class="form-control" name="email" id="email" required
+                    data-rule="email" data-msg="Please enter a valid email" />
                   <div class="validate"></div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4"
-                  data-msg="Please enter at least 8 chars of subject" />
+                <input type="text" class="form-control" name="subject" id="subject" required minlength="4"
+                  data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                 <div class="validate"></div>
               </div>
               <div class="form-group">
                 <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" data-rule="required"
-                  data-msg="Please write something for us"></textarea>
+                <textarea class="form-control" name="message" rows="10" required
+                  data-rule="required" data-msg="Please write something for us"></textarea>
                 <div class="validate"></div>
               </div>
               <div class="mb-3">
@@ -692,12 +923,12 @@
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
   <script>
-    emailjs.init("7EjtnFEz-7ax6QsuK");  // Replace 'your_user_id' with your actual user ID
+    emailjs.init({ publicKey: "7EjtnFEz-7ax6QsuK" });
 
     function sendEmail(event) {
       event.preventDefault()
@@ -707,7 +938,7 @@
       }
 
       // Disable the submit button to prevent multiple submissions
-      document.querySelector('button').setAttribute('disabled', 'disabled');
+      document.querySelector('#myForm button[type="submit"]').setAttribute('disabled', 'disabled');
 
       emailjs.sendForm("service_k99s57e", "template_2a0tus6", "#myForm")
         .then(
@@ -726,7 +957,7 @@
         )
         .finally(function () {
           // Enable the submit button after sending (whether success or error)
-          document.querySelector('button').removeAttribute('disabled');
+          document.querySelector('#myForm button[type="submit"]').removeAttribute('disabled');
 
         });
     }
@@ -762,6 +993,112 @@
 
       return isValid;
     }
+  </script>
+
+  <script>
+    /* Logo — divider expand + dot reveal + click replay */
+    (function () {
+      var logo    = document.getElementById('sidebar-logo');
+      var divider = document.getElementById('logo-divider');
+      var dotL    = document.getElementById('logo-dot-l');
+      var dotR    = document.getElementById('logo-dot-r');
+      if (!logo || !divider) return;
+
+      function revealDivider() {
+        /* Line expands from center outward */
+        setTimeout(function () {
+          divider.style.transform = 'scaleX(1)';
+        }, 780);
+        /* Dots pop in after line reaches the ends */
+        setTimeout(function () {
+          if (dotL) { dotL.style.opacity = '1'; dotL.style.transform = 'scale(1)'; }
+          if (dotR) { dotR.style.opacity = '1'; dotR.style.transform = 'scale(1)'; }
+        }, 1050);
+      }
+      revealDivider();
+
+      /* — Click: replay entry animations — */
+      logo.addEventListener('click', function () {
+        /* Restart whole SVG pop-in */
+        logo.style.animation = 'none';
+        void logo.offsetWidth;
+        logo.style.animation = '';
+
+        /* Reset divider + dots */
+        divider.style.transition = 'none';
+        divider.style.transform  = 'scaleX(0)';
+        if (dotL) { dotL.style.transition = 'none'; dotL.style.opacity = '0'; dotL.style.transform = 'scale(0)'; }
+        if (dotR) { dotR.style.transition = 'none'; dotR.style.opacity = '0'; dotR.style.transform = 'scale(0)'; }
+
+        void divider.offsetWidth;
+        /* Re-set transitions and animate */
+        divider.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+        if (dotL) { dotL.style.transition = 'transform 0.3s cubic-bezier(0.34, 1.8, 0.64, 1), opacity 0.3s ease'; }
+        if (dotR) { dotR.style.transition = 'transform 0.3s cubic-bezier(0.34, 1.8, 0.64, 1), opacity 0.3s ease'; }
+        revealDivider();
+      });
+    })();
+  </script>
+  <script>
+    /* =====================================================
+       Portfolio Enhancements:
+       1. Live project count that updates on filter change
+       2. Tag chip click  → triggers matching isotope filter
+    ===================================================== */
+    $(document).ready(function () {
+      var $portfolioContainer = $('.portfolio-container');
+      var $filterBtns = $('#portfolio-flters li');
+      var $countEl = $('#portfolio-count-num');
+
+      // Helper: update count to number of visible portfolio items
+      function updateCount() {
+        var visible = $portfolioContainer.find('.portfolio-item').not('.isotope-hidden').length;
+        $countEl
+          .parent()
+          .addClass('count-updating');
+        setTimeout(function () {
+          $countEl.text(visible);
+          $countEl.parent().removeClass('count-updating');
+        }, 220);
+      }
+
+      // --------------------------------------------------
+      // Hook into the existing filter-button click (main.js
+      // already handles isotope layout; we just add count)
+      // --------------------------------------------------
+      $filterBtns.on('click', function () {
+        // Wait for isotope to finish layout (~300ms)
+        setTimeout(updateCount, 350);
+      });
+
+      // --------------------------------------------------
+      // Tag-chip click → trigger corresponding filter
+      // --------------------------------------------------
+      $(document).on('click', '[data-tag-filter]', function (e) {
+        e.stopPropagation();
+        var filterValue = $(this).data('tag-filter');
+
+        // 1. Update the filter-bar active state
+        $filterBtns.removeClass('filter-active');
+        $filterBtns.filter('[data-filter="' + filterValue + '"]').addClass('filter-active');
+
+        // 2. Apply isotope filter
+        if ($portfolioContainer.data('isotope')) {
+          $portfolioContainer.isotope({ filter: filterValue });
+        }
+
+        // 3. Animate scroll to portfolio section top
+        $('html, body').animate({
+          scrollTop: $('#portfolio').offset().top - 60
+        }, 400, 'swing');
+
+        // 4. Update count
+        setTimeout(updateCount, 350);
+      });
+
+      // Initial count on page load
+      setTimeout(updateCount, 600);
+    });
   </script>
 
 
