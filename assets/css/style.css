@@ -81,7 +81,146 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   width: 120px;
   height: 120px;
+  cursor: pointer;
+  overflow: visible;
+  transition: filter 0.4s ease;
+  /* Entry: whole logo pops in */
+  animation: logo-pop-in 0.55s cubic-bezier(0.34, 1.5, 0.64, 1) both;
 }
+
+/* --- Hover: outer glow ----------------------------------------- */
+#header .profile .sidebar-logo:hover {
+  filter: drop-shadow(0 0 12px rgba(20, 157, 221, 0.55));
+}
+
+/* --- Accent ring: fade in then spin forever -------------------- */
+#logo-ring {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation:
+    ring-fade-in 0.9s ease 0.3s forwards,
+    ring-spin     14s linear 1.2s infinite;
+}
+.sidebar-logo:hover #logo-ring {
+  animation: ring-spin 3s linear infinite !important;
+  opacity: 0.85 !important;
+}
+
+/* --- K initial: slide in from top ----------------------------- */
+#logo-k {
+  opacity: 0;
+  animation: k-drop-in 0.5s cubic-bezier(0.34, 1.5, 0.64, 1) 0.5s both;
+}
+.sidebar-logo:hover #logo-k {
+  filter: drop-shadow(0 0 6px rgba(20, 157, 221, 0.9));
+}
+
+/* --- S initial: slide in from bottom --------------------------- */
+#logo-s {
+  opacity: 0;
+  animation: s-rise-in 0.5s cubic-bezier(0.34, 1.5, 0.64, 1) 0.65s both;
+}
+.sidebar-logo:hover #logo-s {
+  filter: drop-shadow(0 0 6px rgba(20, 157, 221, 0.9));
+}
+
+/* --- Divider + dots: revealed by JS ---------------------------- */
+#logo-divider {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scaleX(0);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#logo-dot-l,
+#logo-dot-r {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 0.3s cubic-bezier(0.34, 1.8, 0.64, 1), opacity 0.3s ease;
+}
+
+/* --- Separator dot: pop in then pulse -------------------------- */
+#logo-dot {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation:
+    dot-pop-in  0.35s cubic-bezier(0.34, 1.8, 0.64, 1) 0.88s forwards,
+    dot-pulse   2.4s  ease-in-out                        1.3s  infinite;
+}
+.sidebar-logo:hover #logo-dot {
+  animation: dot-hover-expand 0.3s ease forwards !important;
+}
+
+/* --- Dev tag: appear then breathe ------------------------------ */
+#logo-tag {
+  opacity: 0;
+  animation:
+    tag-appear  0.5s ease          1.0s forwards,
+    tag-breathe 3.8s ease-in-out   1.5s infinite;
+}
+.sidebar-logo:hover #logo-tag {
+  animation: none !important;
+  opacity: 1 !important;
+  fill: #149ddd;
+}
+
+/* ================================================================
+   KEYFRAMES
+   ================================================================ */
+
+@keyframes logo-pop-in {
+  from { transform: scale(0.7); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+@keyframes ring-fade-in {
+  from { opacity: 0;    transform: rotate(-70deg); }
+  to   { opacity: 0.55; transform: rotate(-70deg); }
+}
+
+@keyframes ring-spin {
+  from { transform: rotate(-70deg); }
+  to   { transform: rotate(290deg); }
+}
+
+@keyframes k-drop-in {
+  from { transform: translateY(-10px); opacity: 0; }
+  to   { transform: translateY(0);     opacity: 1; }
+}
+
+@keyframes s-rise-in {
+  from { transform: translateY(10px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+@keyframes dot-pop-in {
+  from { transform: scale(0); opacity: 0;   }
+  to   { transform: scale(1); opacity: 0.8; }
+}
+
+@keyframes dot-pulse {
+  0%,  100% { transform: scale(1);   opacity: 0.8; }
+  50%        { transform: scale(2);   opacity: 1;   }
+}
+
+@keyframes dot-hover-expand {
+  to { transform: scale(3); opacity: 1; }
+}
+
+@keyframes tag-appear {
+  from { opacity: 0; }
+  to   { opacity: 0.6; }
+}
+
+@keyframes tag-breathe {
+  0%,  100% { opacity: 0.6;  }
+  50%        { opacity: 0.2;  }
+}
+
+
 
 #header .profile h1 {
   font-size: 24px;
@@ -322,39 +461,198 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.about .content h3 {
-  font-weight: 700;
-  font-size: 26px;
-  color: #173b6c;
+
+/* ---- Profile image wrap ---- */
+.about-img-wrap {
+  position: relative;
+  display: inline-block;
+  width: 100%;
 }
 
-.about .content ul {
-  list-style: none;
-  padding: 0;
+.about-profile-img {
+  width: 100%;
+  border-radius: 18px;
+  border: 3px solid rgba(20, 157, 221, 0.35);
+  box-shadow:
+    0 8px 32px rgba(20, 157, 221, 0.15),
+    0 2px 12px rgba(0, 0, 0, 0.08);
+  display: block;
+  transition: box-shadow 0.4s ease;
 }
 
-.about .content ul li {
-  padding-bottom: 10px;
+.about-profile-img:hover {
+  box-shadow:
+    0 14px 42px rgba(20, 157, 221, 0.28),
+    0 4px 18px rgba(0, 0, 0, 0.1);
 }
 
-.about .content ul i {
-  font-size: 20px;
-  padding-right: 2px;
+/* Floating experience badge */
+.about-exp-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -16px;
+  background: linear-gradient(135deg, #149ddd, #0d7abf);
+  color: #fff;
+  border-radius: 14px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 6px 24px rgba(20, 157, 221, 0.45);
+  border: 3px solid #fff;
+}
+
+.about-exp-num {
+  font-size: 28px;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.about-exp-label {
+  font-size: 11px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.45;
+  opacity: 0.92;
+  text-align: left;
+}
+
+/* ---- Role badge pill ---- */
+.about-role-badge {
+  display: inline-block;
+  background: rgba(20, 157, 221, 0.09);
   color: #149ddd;
+  border: 1px solid rgba(20, 157, 221, 0.28);
+  font-family: "Poppins", sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 5px 16px;
+  border-radius: 50px;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
 }
 
-.about .content pre {
+/* ---- Bio paragraph ---- */
+.about-bio {
+  font-size: 15px;
+  line-height: 1.85;
+  color: #4a5568;
+  margin-bottom: 26px;
   font-family: "Open Sans", sans-serif;
-  font-size: 18px;
-  white-space: pre-wrap;       /* Since CSS 2.1 */
-    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-    white-space: -pre-wrap;      /* Opera 4-6 */
-    white-space: -o-pre-wrap;    /* Opera 7 */
-    word-wrap: break-word;  
 }
-.about .content pre:last-child {
-  margin-bottom: 0;
+
+.about-bio strong {
+  color: #173b6c;
+  font-weight: 700;
 }
+
+/* ---- Info tile grid ---- */
+.about-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 11px;
+}
+
+.about-info-tile {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  background: #fff;
+  border: 1px solid rgba(20, 157, 221, 0.1);
+  border-radius: 11px;
+  padding: 13px 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.045);
+  transition: border-color 0.28s ease,
+              box-shadow 0.28s ease,
+              transform 0.22s ease;
+}
+
+.about-info-tile:hover {
+  border-color: rgba(20, 157, 221, 0.38);
+  box-shadow: 0 5px 20px rgba(20, 157, 221, 0.13);
+  transform: translateY(-2px);
+}
+
+/* Full-width email tile */
+.about-info-tile--wide {
+  grid-column: 1 / -1;
+}
+
+/* Icon badge */
+.about-tile-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 9px;
+  background: rgba(20, 157, 221, 0.09);
+  color: #149ddd;
+  font-size: 20px;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.about-info-tile:hover .about-tile-icon {
+  background: #149ddd;
+  color: #fff;
+}
+
+.tile-label {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  color: #9aa5b4;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 3px;
+}
+
+.tile-value {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+  line-height: 1.4;
+}
+
+.tile-link {
+  color: #149ddd;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.tile-link:hover {
+  color: #0d7abf;
+  text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+  .about-exp-badge {
+    right: 10px;
+    bottom: -14px;
+    padding: 10px 14px;
+  }
+  .about-exp-num {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 575px) {
+  .about-info-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-info-tile--wide {
+    grid-column: auto;
+  }
+}
+
+
 
 /*--------------------------------------------------------------
 # Facts
@@ -558,103 +856,324 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Portfolio
+# Portfolio / Projects
 --------------------------------------------------------------*/
-.portfolio .portfolio-item {
-  margin-bottom: 30px;
-}
 
+/* ---- Filter bar ---- */
 .portfolio #portfolio-flters {
-  padding: 0;
-  margin: 0 auto 35px auto;
+  padding: 6px 10px;
+  margin: 0 auto 40px auto;
   list-style: none;
   text-align: center;
   background: #fff;
   border-radius: 50px;
-  padding: 2px 15px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  box-shadow: 0 4px 20px rgba(20, 157, 221, 0.1);
+  border: 1px solid rgba(20, 157, 221, 0.12);
 }
 
 .portfolio #portfolio-flters li {
   cursor: pointer;
   display: inline-block;
-  padding: 10px 15px 8px 15px;
-  font-size: 14px;
+  padding: 8px 18px;
+  font-size: 13px;
   font-weight: 600;
+  font-family: "Poppins", sans-serif;
   line-height: 1;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: #272829;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
+  color: #555c67;
+  border-radius: 50px;
+  transition: all 0.3s ease;
 }
 
-.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+.portfolio #portfolio-flters li:hover {
+  color: #149ddd;
+  background: rgba(20, 157, 221, 0.08);
+}
+
+.portfolio #portfolio-flters li.filter-active {
+  background: #149ddd;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(20, 157, 221, 0.35);
+}
+
+/* ---- Project Card ---- */
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+
+.pcard {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 22px rgba(0, 0, 0, 0.07);
+  transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1),
+              box-shadow 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid rgba(20, 157, 221, 0.08);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.pcard:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 16px 40px rgba(20, 157, 221, 0.18);
+}
+
+/* Featured badge */
+.pcard-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
+  background: linear-gradient(135deg, #149ddd, #0d7abf);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 50px;
+  box-shadow: 0 2px 10px rgba(20, 157, 221, 0.4);
+}
+
+/* Thumbnail area */
+.pcard-thumb {
+  position: relative;
+  overflow: hidden;
+  height: 210px;
+  background: #f0f4f8;
+}
+
+.pcard-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.pcard:hover .pcard-thumb img {
+  transform: scale(1.05);
+}
+
+/* Frosted overlay on hover */
+.pcard-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 11, 20, 0.55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.pcard:hover .pcard-overlay {
+  opacity: 1;
+}
+
+.pcard-preview {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  padding: 9px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.25s ease, border-color 0.25s ease;
+  letter-spacing: 0.3px;
+}
+
+.pcard-preview i {
+  font-size: 18px;
+}
+
+.pcard-preview:hover {
+  background: #149ddd;
+  border-color: #149ddd;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Card body */
+.pcard-body {
+  padding: 20px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.pcard-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #050d18;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 8px;
+}
+
+.pcard-desc {
+  font-size: 13.5px;
+  color: #5a6474;
+  line-height: 1.65;
+  margin-bottom: 14px;
+  flex: 1;
+  min-height: 66px; /* uniform height across all cards in a row */
+}
+
+/* Tech tag chips */
+.pcard-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.pcard-tags span {
+  background: #eef6fc;
+  color: #149ddd;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  padding: 3px 10px;
+  border-radius: 50px;
+  letter-spacing: 0.3px;
+  border: 1px solid rgba(20, 157, 221, 0.2);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Clickable tag chips (those with data-tag-filter) */
+.pcard-tags span[data-tag-filter] {
+  cursor: pointer;
+}
+
+.pcard-tags span[data-tag-filter]:not(:hover) {
+  box-shadow: none;
+}
+
+/* On hover show a slight underline hint */
+.pcard-tags span[data-tag-filter]:hover {
+  background: rgba(20, 157, 221, 0.15);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.pcard:hover .pcard-tags span {
+  background: #149ddd;
+  color: #fff;
+  border-color: #149ddd;
+}
+
+/* Action buttons row */
+.pcard-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.btn-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #149ddd;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  padding: 8px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.2s ease;
+  letter-spacing: 0.3px;
+}
+
+.btn-live:hover {
+  background: #0d7abf;
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.btn-live i {
+  font-size: 15px;
+}
+
+/* GitHub / Code button */
+.btn-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  color: #050d18;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  padding: 7px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 1.5px solid #cdd5df;
+  transition: background 0.25s ease, border-color 0.25s ease,
+              color 0.25s ease, transform 0.2s ease;
+  letter-spacing: 0.3px;
+}
+
+.btn-github:hover {
+  background: #050d18;
+  border-color: #050d18;
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.btn-github i {
+  font-size: 15px;
+}
+
+/* Project count label */
+.portfolio-count-label {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  color: #8590a0;
+  font-weight: 500;
+  margin-bottom: 28px;
+  letter-spacing: 0.2px;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-count-label span {
+  font-size: 15px;
+  font-weight: 700;
   color: #149ddd;
 }
 
-.portfolio #portfolio-flters li:last-child {
-  margin-right: 0;
+/* Fade during count update */
+.portfolio-count-label.count-updating {
+  opacity: 0.35;
 }
 
-.portfolio .portfolio-wrap {
-  transition: 0.3s;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.portfolio .portfolio-wrap::before {
-  content: "";
-  background: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  transition: all ease-in-out 0.3s;
-  z-index: 2;
-  opacity: 0;
-}
-
-.portfolio .portfolio-wrap .portfolio-links {
-  opacity: 1;
-  left: 0;
-  right: 0;
-  bottom: -60px;
-  z-index: 3;
-  position: absolute;
-  transition: all ease-in-out 0.3s;
-  display: flex;
-  justify-content: center;
-}
-
-.portfolio .portfolio-wrap .portfolio-links a {
-  color: #fff;
-  font-size: 28px;
-  text-align: center;
-  background: rgba(20, 157, 221, 0.75);
-  transition: 0.3s;
-  width: 50%;
-}
-
-.portfolio .portfolio-wrap .portfolio-links a:hover {
-  background: rgba(20, 157, 221, 0.95);
-}
-
-.portfolio .portfolio-wrap .portfolio-links a + a {
-  border-left: 1px solid #37b3ed;
-}
-
-.portfolio .portfolio-wrap:hover::before {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 1;
-}
-
-.portfolio .portfolio-wrap:hover .portfolio-links {
-  opacity: 1;
-  bottom: 0;
+@media (max-width: 767px) {
+  .pcard-thumb {
+    height: 180px;
+  }
+  .pcard-title {
+    font-size: 15px;
+  }
+  .pcard-desc {
+    font-size: 13px;
+  }
 }
 
 /*--------------------------------------------------------------
