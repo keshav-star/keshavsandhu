@@ -655,54 +655,158 @@ section {
 
 
 /*--------------------------------------------------------------
-# Facts
+# Impact / Facts
 --------------------------------------------------------------*/
 .facts {
-  padding-bottom: 30px;
+  padding: 40px 0 36px;
+  background: #f5f8fd;
+  position: relative;
+  overflow: hidden;
 }
 
-.facts .count-box {
-  padding: 30px;
-  width: 100%;
+/* Subtle radial glow removed (was for dark bg) */
+.facts::before {
+  display: none;
 }
 
-.facts .count-box i {
-  display: block;
-  font-size: 44px;
-  color: #149ddd;
-  float: left;
+/* Section title — inherits site defaults, no overrides needed */
+.facts .section-title h2 {
+  color: #173b6c;
 }
 
-.facts .count-box span {
-  font-size: 48px;
-  line-height: 40px;
-  display: block;
-  font-weight: 700;
-  color: #050d18;
-  margin-left: 60px;
+.facts .section-title h2::after {
+  background: #149ddd;
 }
 
-.facts .count-box p {
-  padding: 15px 0 0 0;
-  margin: 0 0 0 60px;
-  font-family: "Raleway", sans-serif;
+.facts .section-title p {
+  color: #555c67;
   font-size: 14px;
-  color: #122f57;
 }
 
-.facts .count-box a {
-  font-weight: 600;
-  display: block;
-  margin-top: 20px;
-  color: #122f57;
-  font-size: 15px;
+/* ---- Grid ---- */
+.impact-grid {
+  gap: 0;
+  row-gap: 16px;
+  column-gap: 0;
+  padding: 0 8px;
+}
+
+/* ---- Card ---- */
+.impact-card {
+  background: #fff;
+  border: 1px solid rgba(20, 157, 221, 0.12);
+  border-radius: 10px;
+  padding: 18px 60px 16px 18px; /* right padding reserves space for the icon */
+  height: 100%;
+  margin: 0 8px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease,
+              box-shadow 0.3s ease,
+              transform 0.28s ease,
+              background 0.3s ease;
+}
+
+.impact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 0;
+  background: linear-gradient(180deg, #149ddd, #0d7abf);
+  transition: height 0.4s ease;
+  border-radius: 0 0 3px 0;
+}
+
+.impact-card:hover {
+  border-color: rgba(20, 157, 221, 0.35);
+  box-shadow: 0 8px 36px rgba(20, 157, 221, 0.12);
+  transform: translateY(-5px);
+  background: #fff;
+}
+
+.impact-card:hover::before {
+  height: 100%;
+}
+
+/* Icon badge — pinned to top-right of the card */
+.impact-icon-wrap {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(20, 157, 221, 0.1);
+  color: #149ddd;
+  font-size: 17px;
+  margin-bottom: 0;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.impact-card:hover .impact-icon-wrap {
+  background: #149ddd;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+/* Number row */
+.impact-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+  margin-bottom: 6px;
+  line-height: 1;
+}
+
+.impact-num {
+  font-size: 32px;
+  font-weight: 800;
   font-family: "Poppins", sans-serif;
-  transition: ease-in-out 0.3s;
+  color: #050d18;
+  letter-spacing: -1.5px;
+  line-height: 1;
 }
 
-.facts .count-box a:hover {
-  color: #1f5297;
+.impact-suffix {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  color: #149ddd;
+  letter-spacing: -0.5px;
 }
+
+/* Label & sub-text */
+.impact-label {
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  color: #173b6c;
+  margin-bottom: 3px;
+}
+
+.impact-sub {
+  font-size: 11px;
+  color: #8590a0;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.4;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .impact-card {
+    margin: 0 4px;
+    padding: 16px 14px 14px;
+  }
+  .impact-num {
+    font-size: 26px;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Skills
