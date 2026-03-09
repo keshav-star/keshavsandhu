@@ -353,43 +353,48 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/bgg.webp") center 25% no-repeat;
-  background-size: cover;
+  /* Use a fixed width so the 4608px canvas stays wide — person stays on right edge */
+  background: url("../img/webp1.png") right top no-repeat;
+  background-size: auto 110%;
   background-color: #050d18;
+  position: relative;
 }
 
+/* Subtle overlay — desktop left is already dark navy from the canvas;
+   mainly needed for tablet/mobile where viewport is narrow */
 #hero:before {
   content: "";
-  background: rgba(5, 13, 24, 0.3);
+  background: linear-gradient(
+    to right,
+    rgba(5, 13, 24, 0.55) 0%,
+    rgba(5, 13, 24, 0.30) 50%,
+    rgba(5, 13, 24, 0.05) 100%
+  );
   position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
+  inset: 0;
   z-index: 1;
 }
 
 #hero .hero-container {
   position: relative;
   z-index: 2;
-  min-width: 300px;
-  padding-left: 26%;
   align-self: center;
   margin-right: auto;
 }
 
 #hero h1 {
-  margin: 0 0 10px 0;
-  font-size: 64px;
+  margin: 10px 0 10px 0;
+  font-size: 58px;
   font-weight: 700;
-  line-height: 56px;
+  line-height: 1.1;
   color: #fff;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.35);
 }
 
 #hero p {
   color: #fff;
-  margin-bottom: 50px;
-  font-size: 26px;
+  margin-bottom: 14px;
+  font-size: 24px;
   font-family: "Poppins", sans-serif;
 }
 
@@ -400,23 +405,244 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 3px solid #149ddd;
 }
 
-@media (min-width: 1024px) {
-  #hero {
-    background-attachment: fixed;
+/* Availability badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(20, 157, 221, 0.15);
+  border: 1px solid rgba(20, 157, 221, 0.4);
+  color: #7dd5f5;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  letter-spacing: 0.4px;
+  backdrop-filter: blur(4px);
+}
+
+.hero-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2ecc71;
+  box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.6);
+  animation: pulse-dot 2s infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.6); }
+  50%       { box-shadow: 0 0 0 6px rgba(46, 204, 113, 0); }
+}
+
+/* Tagline */
+.hero-tagline {
+  font-size: 14px !important;
+  color: rgba(255,255,255,0.72) !important;
+  font-family: "Open Sans", sans-serif !important;
+  margin-bottom: 32px !important;
+  line-height: 1.6;
+  max-width: 420px;
+  font-size: 14px;
+  border: none;
+  padding: 0;
+}
+
+/* CTA buttons */
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.26s ease;
+  white-space: nowrap;
+}
+
+.hero-btn i {
+  font-size: 16px;
+}
+
+/* Primary — solid blue */
+.hero-btn--primary {
+  background: #149ddd;
+  color: #fff;
+  border: 2px solid #149ddd;
+}
+
+.hero-btn--primary:hover {
+  background: #0d7abf;
+  border-color: #0d7abf;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(20,157,221,0.35);
+}
+
+/* Outline — transparent, blue border */
+.hero-btn--outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.6);
+}
+
+.hero-btn--outline:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: #fff;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Ghost — very subtle */
+.hero-btn--ghost {
+  background: transparent;
+  color: rgba(255,255,255,0.75);
+  border: 2px solid transparent;
+  padding-left: 6px;
+}
+
+.hero-btn--ghost:hover {
+  color: #7dd5f5;
+  border-color: rgba(20,157,221,0.3);
+  background: rgba(20,157,221,0.08);
+}
+
+/* Scroll indicator */
+.hero-scroll {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: rgba(255,255,255,0.6);
+  font-size: 32px;
+  line-height: 1;
+  text-decoration: none;
+  animation: bounce-down 2s infinite;
+  transition: color 0.2s;
+}
+
+.hero-scroll:hover {
+  color: #149ddd;
+}
+
+@keyframes bounce-down {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(8px); }
+}
+
+/* ---- Hero responsive breakpoints ---- */
+
+/* Large desktop — sidebar is 300px wide (fixed). Use margin-left to clear it. */
+@media (min-width: 1200px) {
+  #hero .hero-container {
+    margin-left: 340px; /* 300px sidebar + 40px breathing room */
+    width: 520px;
+    max-width: 520px;
+    padding-left: 0;
   }
 }
 
-@media (max-width: 768px) {
-  #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
+/* Medium desktop — sidebar still present */
+@media (min-width: 992px) and (max-width: 1199px) {
+  #hero .hero-container {
+    margin-left: 320px; /* 300px sidebar + 20px gap */
+    width: 440px;
+    max-width: 440px;
+    padding-left: 0;
   }
-  #hero h2 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
+  #hero h1 {
+    font-size: 46px;
   }
 }
+
+/* Tablet landscape — sidebar collapses to hidden, full width available */
+@media (min-width: 769px) and (max-width: 991px) {
+  #hero .hero-container {
+    padding-left: 5%;
+    padding-right: 48px;
+    max-width: 580px;
+  }
+  #hero h1 {
+    font-size: 44px;
+  }
+  #hero p {
+    font-size: 20px;
+  }
+}
+
+/* Tablet portrait & mobile — full overlay, centered text */
+@media (max-width: 768px) {
+  /* Solid overlay — gradient doesn't work when face fills the whole narrow viewport */
+  #hero:before {
+    background: rgba(5, 13, 24, 0.72);
+  }
+  #hero .hero-container {
+    padding-left: 24px;
+    padding-right: 24px;
+    max-width: 100%;
+    min-width: unset;
+  }
+  #hero h1 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+  #hero p {
+    font-size: 18px;
+  }
+  .hero-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .hero-btn {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+  .hero-tagline {
+    font-size: 13px !important;
+    max-width: 100%;
+  }
+  /* Hide scroll chevron on short/narrow screens where it overlaps buttons */
+  .hero-scroll {
+    display: none;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 400px) {
+  #hero h1 {
+    font-size: 28px;
+  }
+  #hero p {
+    font-size: 16px;
+  }
+  .hero-badge {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+}
+
+/* Remove parallax on WebP — avoids GPU compositing jank */
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: scroll;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Sections General
@@ -424,6 +650,11 @@ h1, h2, h3, h4, h5, h6 {
 section {
   padding: 60px 0;
   overflow: hidden;
+}
+
+/* Hero needs overflow visible so the scroll-chevron (absolute, outside flow) isn't clipped */
+#hero {
+  overflow: visible;
 }
 
 .section-bg {
