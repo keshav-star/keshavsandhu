@@ -354,7 +354,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100vh;
   /* Use a fixed width so the 4608px canvas stays wide — person stays on right edge */
-  background: url("../img/webp1.png") right top no-repeat;
+  background: url("../img/webp1.webp") right top no-repeat;
   background-size: auto 110%;
   background-color: #050d18;
   position: relative;
