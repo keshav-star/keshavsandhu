@@ -131,10 +131,41 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
+
+      <!-- Availability badge -->
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Open to Work
+      </div>
+
       <h1>Keshav Sandhu</h1>
-      <p>I'm a <span class="typed" data-typed-items="Full-Stack Engineer, Web Developer, AI-Integrated App Developer"></span></p>
+
+      <p>I'm a <span class="typed" data-typed-items="Full-Stack Engineer, Web Developer, AI App Developer, React / Next.js Dev"></span></p>
+
+      <p class="hero-tagline">Building fast, scalable, AI-integrated web apps that ship and scale.</p>
+
+      <!-- CTA row -->
+      <div class="hero-cta">
+        <a href="#portfolio" class="hero-btn hero-btn--primary scrollto">
+          <i class="bx bx-code-alt"></i> View Projects
+        </a>
+        <a href="assets/files/resume.pdf" class="hero-btn hero-btn--outline" download="Keshav_Sandhu_Resume.pdf">
+          <i class="bx bx-download"></i> Download Resume
+        </a>
+        <a href="#contact" class="hero-btn hero-btn--ghost scrollto">
+          <i class="bx bx-envelope"></i> Hire Me
+        </a>
+      </div>
+
     </div>
+
+    <!-- Scroll indicator -->
+    <a href="#about" class="hero-scroll scrollto" title="Scroll down">
+      <i class="bx bx-chevron-down"></i>
+    </a>
+
   </section><!-- End Hero -->
+
 
   <main id="main">
 
@@ -764,47 +795,72 @@
 
         <div class="section-title">
           <h2>Services</h2>
-          <p>Crafting seamless full-stack solutions, specializing in React.js for dynamic front-end experiences and
-            Node.js for robust back-end development. Elevate your digital presence with responsive design and expert
-            technical consultation.</p>
+          <p>End-to-end engineering — from pixel-perfect UIs to production-grade backends and AI integrations. Here's what I bring to your project.</p>
         </div>
 
         <div class="row">
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <div class="icon"><i class="icofont-computer"></i></div>
-            <h4 class="title"><a href="">Full-Stack Development</a></h4>
-            <p class="description">Bringing comprehensive solutions to life by seamlessly integrating front-end
-              experiences with powerful and scalable back-end systems.</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
-            <h4 class="title"><a href="">React.js Mastery</a></h4>
-            <p class="description">Harnessing the capabilities of React.js to develop dynamic and interactive user
-              interfaces, providing an exceptional user experience.</p>
-          </div>
-          <!-- <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="icofont-earth"></i></div>
-            <h4 class="title"><a href="">Node.js Backend Development</a></h4>
-            <p class="description">Designing and implementing robust server-side applications using Node.js, ensuring efficient data handling and server performance.</p>
-          </div> -->
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="icofont-image"></i></div>
-            <h4 class="title"><a href="">Responsive Web Design</a></h4>
-            <p class="description">Implementing responsive design principles to create visually appealing and adaptive
-              web applications that work seamlessly on various devices.</p>
-          </div>
-          <!-- <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon"><i class="icofont-settings"></i></div>
-            <h4 class="title"><a href="">Technical Consultation</a></h4>
-            <p class="description">Providing expert guidance and insights on React.js and Node.js strategies, ensuring informed decision-making for your digital projects.</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon"><i class="icofont-tasks-alt"></i></div>
-            <h4 class="title"><a href="">Continuous Integration and Deployment</a></h4>
-            <p class="description">Implementing CI/CD pipelines to automate testing, build, and deployment processes, ensuring a streamlined and efficient development workflow for your projects.</p>
-          </div> -->
-        </div>
 
+          <!-- Service 1 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+            <div class="svc-card">
+              <div class="svc-icon"><i class="bx bx-layer"></i></div>
+              <h4>Full-Stack Web Development</h4>
+              <p>End-to-end product delivery — responsive React/Next.js frontends wired to Node.js + PostgreSQL backends, deployed and production-ready.</p>
+              <div class="svc-tags"><span>React.js</span><span>Next.js</span><span>Node.js</span><span>PostgreSQL</span></div>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="80">
+            <div class="svc-card">
+              <div class="svc-icon"><i class="bx bx-brain"></i></div>
+              <h4>AI & LLM Integration</h4>
+              <p>Embed intelligent features into your product — RAG pipelines, LangChain agents, Gemini/OpenAI APIs, and custom AI workflows.</p>
+              <div class="svc-tags"><span>LangChain</span><span>Gemini API</span><span>RAG</span><span>Pinecone</span></div>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="160">
+            <div class="svc-card">
+              <div class="svc-icon"><i class="bx bx-tachometer"></i></div>
+              <h4>Performance Optimisation</h4>
+              <p>Audit and fix Core Web Vitals, implement caching strategies, query optimisation, and lazy-loading to hit 90th+ percentile scores.</p>
+              <div class="svc-tags"><span>Core Web Vitals</span><span>Redis</span><span>CDN</span><span>WebP</span></div>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="240">
+            <div class="svc-card">
+              <div class="svc-icon"><i class="bx bx-store-alt"></i></div>
+              <h4>SaaS & E-Commerce Platforms</h4>
+              <p>Build scalable multi-tenant SaaS products or e-commerce sites with payment integration, role-based access, and analytics dashboards.</p>
+              <div class="svc-tags"><span>Stripe</span><span>Razorpay</span><span>Auth</span><span>Admin Dashboard</span></div>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="320">
+            <div class="svc-card">
+              <div class="svc-icon"><i class="bx bx-cloud"></i></div>
+              <h4>Cloud Deployment & DevOps</h4>
+              <p>Set up CI/CD pipelines, containerise with Docker, and deploy to AWS or Vercel with environment configs, monitoring, and rollback strategies.</p>
+              <div class="svc-tags"><span>AWS</span><span>Docker</span><span>GitHub Actions</span><span>Vercel</span></div>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="svc-card">
+              <div class="svc-icon"><i class="bx bx-wrench"></i></div>
+              <h4>API Design & Integration</h4>
+              <p>Design clean RESTful or GraphQL APIs, integrate third-party services, and write robust documentation — built for reliability and scale.</p>
+              <div class="svc-tags"><span>REST API</span><span>GraphQL</span><span>Postman</span><span>JWT</span></div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
     <!-- End Services Section -->
@@ -815,77 +871,77 @@
 
         <div class="section-title">
           <h2>Testimonials</h2>
-          <p>Insights from Those Who've Experienced My Work — Read What Clients and Collaborators Have to Say About the
-            Journey of Turning Ideas into Exceptional Digital Experiences.</p>
+          <p>What clients and collaborators say about working with me — real feedback from real projects.</p>
         </div>
 
-        <div class="owl-carousel testimonials-carousel">
+        <div class="row testi-grid">
 
-          <div class="testimonial-item" data-aos="fade-up">
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Working with Keshav has been a game-changer. Their technical expertise and dedication to delivering
-              high-quality results set them apart. I highly recommend their services.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-            <!-- <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt=""> -->
-            <h3>Lakshya Tyagi</h3>
-            <h4>Founder &amp; Program Warehouse</h4>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
+            <div class="testi-card">
+              <div class="testi-top">
+                <div class="testi-avatar">LT</div>
+                <div>
+                  <h4 class="testi-name">Lakshya Tyagi</h4>
+                  <p class="testi-role">Founder, Program Warehouse</p>
+                  <div class="testi-stars">★★★★★</div>
+                </div>
+              </div>
+              <p class="testi-quote">&ldquo;Working with Keshav has been a game-changer. Their technical expertise and dedication to delivering high-quality results set them apart. I highly recommend their services.&rdquo;</p>
+              <span class="testi-project">Project: Program Warehouse Platform</span>
+            </div>
           </div>
 
-          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              I've had the pleasure of collaborating with Keshav on multiple projects. Their reliability, commitment,
-              and results-driven approach make them an invaluable asset. Exceptional work, every time.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-            <!-- <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt=""> -->
-            <h3>Pawan Yadav</h3>
-            <h4>Founder, OwnTechnologies</h4>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="80">
+            <div class="testi-card">
+              <div class="testi-top">
+                <div class="testi-avatar">PY</div>
+                <div>
+                  <h4 class="testi-name">Pawan Yadav</h4>
+                  <p class="testi-role">Founder, OwnTechnologies</p>
+                  <div class="testi-stars">★★★★★</div>
+                </div>
+              </div>
+              <p class="testi-quote">&ldquo;I've had the pleasure of collaborating with Keshav on multiple projects. Their reliability, commitment, and results-driven approach make them an invaluable asset. Exceptional work, every time.&rdquo;</p>
+              <span class="testi-project">Project: EduAct Coaching Platform</span>
+            </div>
           </div>
 
-          <!-- <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor
-              labore quem eram duis noster aute amet eram fore quis sint minim.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-            <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-            <h3>Jena Karlis</h3>
-            <h4>Store Owner</h4>
-          </div> -->
-
-          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Keshav brings a unique blend of innovation and collaboration to every project. Their ability to translate
-              ideas into reality is impressive. A true professional who ensures success.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-            <!-- <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt=""> -->
-            <h3>Mr. Ajith</h3>
-            <h4>Freelancer</h4>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="160">
+            <div class="testi-card">
+              <div class="testi-top">
+                <div class="testi-avatar">AJ</div>
+                <div>
+                  <h4 class="testi-name">Mr. Ajith</h4>
+                  <p class="testi-role">Freelancer &amp; Startup Consultant</p>
+                  <div class="testi-stars">★★★★★</div>
+                </div>
+              </div>
+              <p class="testi-quote">&ldquo;Keshav brings a unique blend of innovation and collaboration to every project. Their ability to translate ideas into reality is impressive. A true professional who ensures success.&rdquo;</p>
+              <span class="testi-project">Project: IELTS Guroo Platform</span>
+            </div>
           </div>
 
-          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Keshav has a remarkable talent for elevating digital experiences. Their attention to detail and commitment
-              to user-centric design make them a standout professional. A pleasure to work with.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-            <!-- <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt=""> -->
-            <h3>A. Chitranjan</h3>
-            <h4>Owner, Puppy-tails</h4>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="240">
+            <div class="testi-card">
+              <div class="testi-top">
+                <div class="testi-avatar">AC</div>
+                <div>
+                  <h4 class="testi-name">A. Chitranjan</h4>
+                  <p class="testi-role">Owner, Puppy-tails</p>
+                  <div class="testi-stars">★★★★★</div>
+                </div>
+              </div>
+              <p class="testi-quote">&ldquo;Keshav has a remarkable talent for elevating digital experiences. Their attention to detail and commitment to user-centric design make them a standout professional. A pleasure to work with.&rdquo;</p>
+              <span class="testi-project">Project: Puppy-tails E-commerce</span>
+            </div>
           </div>
 
         </div>
-
       </div>
     </section>
-    <!-- End Testimonials Section  -->
+    <!-- End Testimonials Section -->
+
+
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -893,38 +949,56 @@
 
         <div class="section-title">
           <h2>Contact</h2>
-          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
+          <p>Have a project in mind or just want to talk tech? I'm always open to new opportunities and collaborations. Drop a message and I'll get back within 24 hours.</p>
         </div>
 
         <div class="row" data-aos="fade-in">
 
+          <!-- Info Panel -->
           <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="icofont-google-map"></i>
-                <h4>Location:</h4>
-                <p>Noida, Uttar Pradesh</p>
+            <div class="contact-info-panel">
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="bx bx-map"></i></div>
+                <div>
+                  <h5>Location</h5>
+                  <p>Noida, Uttar Pradesh, India</p>
+                </div>
               </div>
 
-              <div class="email">
-                <i class="icofont-envelope"></i>
-                <h4>Email:</h4>
-                <p>keshavsandhu.me@gmail.com</p>
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="bx bx-envelope"></i></div>
+                <div>
+                  <h5>Email</h5>
+                  <a href="mailto:keshavsandhu.me@gmail.com" class="contact-link">keshavsandhu.me@gmail.com</a>
+                </div>
               </div>
 
-              <div class="phone">
-                <i class="icofont-phone"></i>
-                <h4>Call:</h4>
-                <p>+91 93061 96592</p>
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="bx bxl-linkedin"></i></div>
+                <div>
+                  <h5>LinkedIn</h5>
+                  <a href="https://www.linkedin.com/in/keshavsandhu/" target="_blank" rel="noopener noreferrer" class="contact-link">linkedin.com/in/keshavsandhu</a>
+                </div>
               </div>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112102.66847864402!2d77.291771!3d28.5355161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="bx bxl-github"></i></div>
+                <div>
+                  <h5>GitHub</h5>
+                  <a href="https://github.com/keshav-star" target="_blank" rel="noopener noreferrer" class="contact-link">github.com/keshav-star</a>
+                </div>
+              </div>
+
+              <div class="contact-cta">
+                <i class="bx bx-check-circle"></i>
+                <span>Open to freelance, full-time &amp; collaboration opportunities</span>
+              </div>
 
             </div>
-
           </div>
 
+          <!-- Form -->
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
             <form id="myForm" role="form" class="php-email-form" onsubmit="sendEmail(event)">
               <div class="form-row">
@@ -949,23 +1023,23 @@
               </div>
               <div class="form-group">
                 <label for="message">Message</label>
-                <textarea class="form-control" name="message" rows="10" required
+                <textarea class="form-control" name="message" rows="8" required
                   data-rule="required" data-msg="Please write something for us"></textarea>
                 <div class="validate"></div>
               </div>
               <div class="mb-3">
-                <div class="loading">Loading</div>
+                <div class="loading">Sending…</div>
                 <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                <div class="sent-message">Your message has been sent. Thank you! I'll reply within 24 hours. 🎉</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit">Send Message <i class="bx bx-send"></i></button></div>
             </form>
           </div>
 
         </div>
-
       </div>
     </section><!-- End Contact Section -->
+
 
   </main><!-- End #main -->
 
